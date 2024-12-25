@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./src/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+  <title>RDX</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@2.0.0/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+ <header class="py-5 px-5 sm:px-10 flex justify-between items-center relative">
+  <!-- Logo Section -->
+  <div class="text-2xl sm:text-4xl font-bold teko w-auto">
+    CalmQuest
+  </div>
+
+  <!-- Navigation Section -->
+  <nav class="flex items-center">
+    <!-- Large screen navigation -->
+    <div class="hidden lg:flex space-x-8 text-xl sm:text-2xl teko">
+      <a href="./test.html" class="hover:text-gray-600">HOME</a>
+      <a href="#" class="hover:text-gray-600">SERVICES</a>
+      <a href="#" class="hover:text-gray-600">Q&A</a>
+    </div>
+
+    <!-- Mobile navigation (hamburger menu) -->
+    <div class="lg:hidden">
+      <button id="menu-toggle" class="focus:outline-none">
+        <!-- Hamburger Icon -->
+        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+
+      <!-- Mobile dropdown menu -->
+      <div id="mobile-menu"
+        class="hidden absolute bg-white shadow-md rounded-lg right-5 top-16 w-48 space-y-2 text-lg z-50">
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">SERVICES</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Q&A</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle functionality
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+<style>
+  body.overflow-hidden {
+    overflow: hidden;
+  }
+</style>
+
+
+  <hr class="w-full h-1 bg-black">
+  <main class="relative lg:flex lg:justify-center grid grid-cols-1 lg:items-center lg:w-full w-screen lg:h-[90vh] h-full">
+    <div class="slider w-full h-full lg:flex grid grid-cols-1 overflow-hidden">
+      <!-- slide 0 -->
+      <div class="slide bg-[#FDF8E2] border lg:border-r-black border-b-black lg:border-r-4 border-b-4  lg:border-y-transparent w-full h-full lg:w-[100%]">
+        <div class="p lg:flex lg:justify-center grid grid-cols-1 teko">
+        <div class="lg:w-[40%] w-full">
+          <!-- logo -->
+          <div class="lg:hidden block text-4xl ml-[30%] my-6">
+            <h2 class="w-full flex items-center">
+              CalmQuesim<img src="/Group.svg" alt="" class="w-6 ml-2">
+            </h2>
+          </div>
+          <div class="lg:h-[30vh] lg:block hidden lg:top-[5%] lg:ml-32">
+            <canvas id="logo" class=" logo lg:w-96 w-20 cursor-pointer"></canvas>
+          <script src="https://unpkg.com/@rive-app/canvas@latest"></script>
+          <script type="module" src="./src/sun.js"></script></div>
+          <div class="lg:relative">
+            <h2 class="lg:text-5xl text-2xl lg:ml-20 ml-7 lg:w-[70vh]">Empowering Minds, Healing Hearts!</h2>
+            <p class=" lg:mx-10 mx-5 lg:my-5 text-base lg:text-xl lg:w-[75vh]">Welcome to our platform, where mental well-being is our
+              priority. We offer a compassionate space for psychological
+              therapy, providing support and guidance to help individuals overcome life's challenges.
+          </div>
+         <!-- learn -->
+        <canvas id="learn-more" class="lg:top-[45%] lg:left-[23%] lg:ml-0 ml-[54%] lg:absolute lg:w-80 w-40 h-28 lg:h-56 "></canvas>
+        <script src="https://unpkg.com/@rive-app/canvas@latest"></script>
+        <script type="module" src="./src/learn-more.js"></script>
+        </div>
+        <div class="lg:w-[60%] w-full">
+          <!-- fighters -->
+         <div class="relative lg:w-full w-[70%] lg:h-auto h-[39%] lg:top-auto top[10%]">
+          <canvas id="riveCanvas" class="fight lg:w-[90%] w-full  lg:ml-[10%] ml-[43%]"></canvas>
+          <script src="https://unpkg.com/@rive-app/canvas@latest"></script>
+          <script type="module" src="./src/fighterrs.js"></script>
+         </div>
+         <div class="absolute lg:top-24 top-[38%] lg:w-[38%] lg:h-auto  w-64">
+              <canvas id="birds" class="cursor-pointer w-full"></canvas>
+              <script src="https://unpkg.com/@rive-app/canvas@latest"></script>
+              <script type="module" src="./src/birds.js"></script>
+         </div>
+        <div id="lottie-container" class="lg:hidden block w-36 h-40 absolute top-[35%]"></div>
+        <script>
+          // Initialize the Lottie animation
+          lottie.loadAnimation({
+            container: document.getElementById('lottie-container'), // Container element
+            renderer: 'svg', // Render as SVG
+            loop: true, // Loop the animation
+            autoplay: true, // Start automatically
+            path: '/Animation - 1734947644509.json' // Path to the Lottie JSON file
+          });
+        </script>
+
+        </div>
+       </div>
+      </div>
+      
+      <!-- Slide 1 -->
+      <div class="slide bg-[#FCDD9D] flex items-center justify-center lg:w-[5%] lg:h-full h-16 cursor-pointer">
+        <h1 class="vertical-header rounded-full text-center teko flex justify-center items-center">WELL-BEING</h1>
+        <div class="p hidden lg:w-[90%] w-full">
+          <div class="lg:flex lg:justify-center teko w-full ">
+            <div class="lg:w-1/2 w-full h-full">
+              <div class="flex items-center mx-[15%] lg:mt-36">
+                <div id="bee" class=" w-32 h-32"></div>
+                <script type="module" src="./src/lottie.js"></script>
+              <h2 class=" lg:text-6xl text-3xl mt-16">
+                Well-being
+              </h2>
+              </div>
+              
+               <h2 class="lg:text-4xl text-2xl lg:ml-2 ml-[7%] my-4 lg:my-6">Well-being is the harmony of mind, body, and soul nurtured through daily actions.</h2>
+              <p class="lg:text-xl text-base mx-3 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio fugiat quasi
+                expedita reprehenderit dolorum velit optio
+                laudantium eligendi, accusamus alias! Consequatur, voluptatum. Atque at quae, nam quaerat excepturi ipsam quidem.</p>
+            </div>
+          <canvas id="hero" class="cursor-pointer lg:w-1/2 w-[80%] lg:mx-0 mx-[10%]"></canvas>
+          <script type="module" src="./src/hero.js"></script>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div id="slide2" class="slide bg-[#FFBCBB] flex items-center justify-center lg:w-[5%] lg:h-full h-16 cursor-pointer">
+        <h1 class="vertical-header  rounded-full text-center  teko flex justify-center items-center">SELF-CARE 
+        </h1>
+        <div class=" p hidden lg:w-[90%] w-full ">
+          <div class="lg:flex lg:justify-center">
+            <div class="teko lg:w-1/2">
+              <div class="flex items-center mx-[15%] lg:mt-36">
+                <div id="featherwoman" class=" w-32 h-32"></div>
+                <script type="module" src="./src/lottie.js"></script>
+                <h2 class=" lg:text-6xl text-3xl lg:mt-5" >
+                  Self-care
+                </h2>
+              </div>
+              <p class="lg:text-4xl text-2xl lg:ml-2 ml-[7%] my-4 lg:my-6">Self-care is how you take your power back.</p>
+              <p class="lg:text-xl text-base mx-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eos et ex repellendus itaque quod sunt voluptatum quaerat ut fugit magnam autem eaque sint eveniet error id, dolorum eligendi. Cupiditate?</p>
+            </div>
+            <div class="lg:w-1/2 w-full">
+              <model-viewer src="feater/scene.gltf" alt="3D Model" auto-rotate camera-controls scale="2 2 2" shadow-intensity="0.8"
+                exposure="1">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide bg-[#F04639] flex items-center justify-center lg:w-[5%] lg:h-full h-16 cursor-pointer">
+        <h1 class="vertical-header rounded-full  text-center teko flex justify-center items-center">AWARENESS
+        </h1>
+        <div class="p common-padding h-full hidden ">
+          <div class="lg:flex lg:justify-center">
+            <div class="lg:w-1/2 w-full h-full">
+              <h2 class=" lg:text-5xl lg:mt-16 lg:mx-0 mx-[29%] text-3xl">Awareness</h2>
+              <div class="flex items-center">
+                <div id="warn" class=" lg:w-28 w-16 lg:h-32"></div>
+                <script type="module" src="./src/lottie.js"></script>
+                <p class="text-3xl">
+                20%
+                </p>
+              </div>
+              <div class="flex items-center">
+                <div id="sad" class=" lg:w-32 w-20 lg:h-32 "></div>
+                <script type="module" src="./src/lottie.js"></script>
+                <p class="text-3xl"> 5%</p>
+              </div>
+              <p class="lg:text-xl text-base w-full lg:w-[90%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eos et ex
+                repellendus itaque quod sunt voluptatum quaerat dolorum eligendi.
+                Cupiditate?</p>
+            </div>
+          <div class="w-full md:w-1/2 text-xl lg:mt-0 mt-7">
+            <canvas id="myChart"></canvas>
+            <script type="module" src="./src/chart.js"></script>
+          </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="slide bg-[#A3B565] flex  items-center justify-center lg:w-[5%] lg:h-full h-16 w-full cursor-pointer">
+        <h1 class="vertical-header rounded-full text-center teko flex justify-center items-center">HEALING
+        </h1>
+        <div class="p hidden w-[90%]">
+          <div class="flex justify-center h-full">
+            <div class="lg:w-1/2 w-full  h-full ">
+              <canvas id="searchBTN" class="cursor-pointer w-full h-40 lg:h-44 ml-14 relative"></canvas>
+              <script src="https://unpkg.com/@rive-app/canvas@latest"></script>
+              <script type="module" src="./src/searchBTN.js"></script>
+              <input type="text" placeholder="Ask a question..." class="absolute lg:top-[16%] top-[17%] left-[35%]  lg:left-[40%] bg-transparent lg:w-64 teko focus:outline-none focus:border-none placeholder:font-serif placeholder:text-slate-500 placeholder:text-center">
+              <p class="lg:text-xl text-base text-center lg:ml-0 ml-8">We’d love to hear from you! Whether you have a question, feedback, or need support, feel
+                free to reach out to us. Our
+                team is here to help you.</p>
+                <div id="island" class=" w-96 h-80 mx-[20%] lg:mx-[22%]"></div>
+                <script type="module" src="./src/lottie.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./src/slider.js"></script>
+  </main>
+  <script src="./src/main.js"></script>
+</body>
+
+</html>

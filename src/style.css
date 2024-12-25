@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  @apply bg-[#FDF8E2]
+  
+}
+.flex-center {
+  @apply flex items-center justify-center
+}
+.common-padding {
+  @apply sm:py-20 py-10 sm:px-10 px-5
+}
+.search {
+  height: 500px;
+  /* Ensure the div is tall enough to fit the canvas */
+}
+.vertical-header {
+  writing-mode: vertical-lr;
+  /* Rotates the text vertically */
+  transform: rotate(180deg);
+  /* Adjust the rotation to make it upright */
+}
+@media  (max-width: 996px) {
+  .vertical-header{
+    writing-mode: horizontal-tb;
+    transform: rotate(360deg);
+  }
+    .vertical-header0 {
+      writing-mode: horizontal-tb;
+      transform: rotate(360deg);
+    }
+}
+canvas {
+  /* Optional: Make it responsive */
+  height: auto;
+}
+.teko {
+  font-family: "Teko", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+main {
+  position: relative;
+}
+model-viewer {
+  width: 100%;
+  /* Make the width responsive, 100% of its container */
+  height: 500px;
+  /* Set a default height (can be adjusted as needed) */
+}
+
+@media (max-width: 996px) {
+  model-viewer {
+    width: 90%;
+    /* 90% of the container width on smaller screens */
+    height: 400px;
+    /* Adjust the height for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  model-viewer {
+    width: 100%;
+    /* Take up full width on very small screens */
+    height: 300px;
+    /* Reduce height further for mobile screens */
+  }
+}
