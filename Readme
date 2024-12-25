@@ -1,0 +1,112 @@
+Mental Health and Support App
+
+This is a Vanilla JavaScript application built using Vite as the development environment. The app aims to promote mental health and provide resources for support. It integrates several interactive and animated features using modern libraries and tools.
+
+Features
+
+Interactive Vector Animations: Powered by Rive.
+
+Advanced Animations: Smooth animations implemented using GSAP.
+
+Lottie Files: Used for animated vector illustrations.
+
+3D Model Integration: Utilizes Model Viewer for showcasing 3D models.
+
+Chart Integration: Displays data visually using Chart.js.
+
+Prerequisites
+
+Before you begin, ensure you have the following installed on your system:
+
+Node.js (v14 or later recommended)
+
+npm (comes with Node.js)
+
+Getting Started
+
+Follow these steps to set up and run the project:
+
+1. Clone the Repository
+
+# Clone this repository
+$ git clone <repository-url>
+
+# Navigate to the project directory
+$ cd <project-directory>
+
+2. Install Dependencies
+
+# Install the required packages
+$ npm install
+
+3. Run the Development Server
+
+# Start the development server
+$ npm run dev
+
+4. Access the App
+
+After running the development server, open your browser and navigate to:
+
+http://localhost:5173
+
+Libraries and Tools Used
+
+Vite:
+
+Fast and lightweight development server.
+
+Rive:
+
+Interactive vector animations.
+
+Documentation: Rive.app
+
+GSAP:
+
+GreenSock Animation Platform for robust animations.
+
+Documentation: greensock.com
+
+Lottie Files:
+
+Animated vector illustrations using JSON-based animation files.
+
+Documentation: LottieFiles.com
+
+Model Viewer:
+
+Integration of 3D models into the app.
+
+Documentation: modelviewer.dev
+
+Chart.js:
+
+Visual representation of data using charts.
+
+Documentation: chartjs.org
+
+Project Goals
+
+This application aims to provide an interactive and visually engaging platform for:
+
+Educating users about mental health.
+
+Offering resources and support mechanisms.
+
+Encouraging a community-driven approach to mental well-being.
+
+Development Notes
+
+Scripts
+
+npm install: Installs project dependencies.
+
+npm run dev: Starts the development server.
+
+npm run build: Builds the app for production.
+
+
+Contact
+
+If you have any questions or suggestions, feel free to reach out.
