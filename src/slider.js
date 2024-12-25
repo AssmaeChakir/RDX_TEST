@@ -60,7 +60,7 @@ function handleSmallScreen() {
             });
           } else {
             s.style.display = 'block'; // Ensure it's visible
-            gsap.to(s, { width: '100%', height: '100%', duration: 0.1 });
+            gsap.to(s, { width: '100%', height: '100vh', duration: 0.1 });
             h1 && gsap.to(h1, { opacity: 0, duration: 0.3 });
             cross.style.display = 'block'; // Show close button
             content &&
