@@ -24,7 +24,7 @@ lottie.loadAnimation({
     renderer: 'svg', // Render as SVG
     loop: true, // Loop the animation
     autoplay: true, // Start automatically
-    path: '../public/last.json' // Path to the Lottie JSON file
+    path: '/last.json' // Path to the Lottie JSON file
 });
 
 lottie.loadAnimation({
@@ -33,4 +33,11 @@ lottie.loadAnimation({
     loop: true, // Loop the animation
     autoplay: true, // Start automatically
     path: '/ROSE.json' // Path to the Lottie JSON file
+});
+lottie.loadAnimation({
+    container: document.getElementById('fight'), // Container element
+    renderer: 'svg', // Render as SVG
+    loop: true, // Loop the animation
+    autoplay: true, // Start automatically
+    path: '/fight.json' // Path to the Lottie JSON file
 });
